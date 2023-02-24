@@ -1,34 +1,38 @@
 public class Ticket {
-    // create attributes row, seat, price, and Person (Object from class Person)
-    private int row;
-    private int seat;
-    private double price;
-    private Person person;
+    // instance variables
+    private int seatNumber; // seat number
+    private int rowNumber; // row number
+    private double ticketPrice; // ticket price
+    private Person ticketHolder; // ticket holder
 
     // constructor
     public Ticket(int row, int seat, double price, Person person) {
-        this.row = row;
-        this.seat = seat;
-        this.price = price;
-        this.person = person;
+        // set the instance variables
+        rowNumber = row; // set the row number
+        seatNumber = seat; // set the seat number
+        ticketPrice = price; // set the ticket price
+        ticketHolder = person; // set the ticket holder
     }
 
-    // create getters
-    public int getRow() {
-        return row;
-    }
-    public int getSeat() {
-        return seat;
-    }
-    public double getPrice() {
-        return price;
+    // getters
+    public int getRowNumber() {
+        return rowNumber; // return the row number
     }
 
-    // create methods to print the ticket
+    public int getSeatNumber() {
+        return seatNumber; // return the seat number
+    }
+
+    public double getTicketPrice() {
+        return ticketPrice; // return the ticket price
+    }
+
+    // print ticket method
     public void print() {
-        // print ticket with Person name, Person surname, Person email, row, seat, and price.
-        System.out.println("Ticket: \nName: " + person.getName() + " " + person.getSurname() + "\nEmail: " + person.getEmail() + "\nRow No. " + row + " \nSeat No. " + seat + "\nPrice: " + price + "£");
+        // print the ticket with the person's name, surname, email, row number, seat
+        // number and ticket price
+        System.out.println("Movie Ticket: \nName: " + ticketHolder.getName() + " " + ticketHolder.getSurname()
+                + "\nEmail: " + ticketHolder.getEmail() + "\nRow Number: " + rowNumber + " \nSeat Number: " + seatNumber
+                + "\nTicket Price: " + ticketPrice + "£");
     }
-
-    
 }
